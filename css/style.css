@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #111;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  background: orangered;
+  width: 100%;
+}
+
+.nav .down-arrow {
+  display: none;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav__item {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav__item:hover {
+  background: #ff6a33;
+}
+
+.nav__item:nth-child(2):hover .hidden__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 0 1.2rem;
+}
+
+.nav__item:nth-child(4):hover .hidden__list-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 0 1.2rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: beige;
+}
+
+.nav .hidden__list {
+  display: none;
+  list-style: none;
+  position: absolute;
+  background: #222;
+  top: 100%;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  cursor: initial;
+}
+
+.nav .hidden__list hr {
+  border: none;
+  background: orangered;
+  height: 1px;
+  width: 100%;
+}
+
+.nav .hidden__list-2 {
+  display: none;
+  list-style: none;
+  position: absolute;
+  background: #222;
+  top: 100%;
+  right: 0;
+  width: 200%;
+  height: 200%;
+  cursor: initial;
+}
+
+.nav .hidden__list-2 hr {
+  border: none;
+  background: orangered;
+  height: 1px;
+  width: 100%;
+}
+
+.nav .hidden__item {
+  width: 100%;
+}
+
+.nav .hidden__link {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 350px) {
+  .nav {
+    background: none;
+    width: 100%;
+    padding: 3em 1em;
+  }
+  .nav .down-arrow {
+    display: block;
+    font-size: 1.5rem;
+    animation: move 2s linear infinite;
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+  .nav__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav__item {
+    border: 1px solid black;
+    background: orangered;
+    margin: 0.5em 0;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+  }
+  .nav__item:hover {
+    background: white;
+  }
+  .nav__item:nth-child(2):hover .hidden__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 0 1.2rem;
+    z-index: 999;
+  }
+  .nav__item:nth-child(4):hover .hidden__list-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 0 1.2rem;
+    z-index: 999;
+  }
+  .nav__link {
+    text-decoration: none;
+    color: #222;
+  }
+  .nav .hidden__list {
+    display: none;
+    list-style: none;
+    position: absolute;
+    background: #222;
+    border: 1px solid orangered;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 220%;
+    cursor: initial;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  .nav .hidden__list hr {
+    border: none;
+    background: orangered;
+    height: 1px;
+    width: 100%;
+  }
+  .nav .hidden__list-2 {
+    display: none;
+    list-style: none;
+    position: absolute;
+    background: #222;
+    border: 1px solid orangered;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 220%;
+    cursor: initial;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  .nav .hidden__list-2 hr {
+    border: none;
+    background: orangered;
+    height: 1px;
+    width: 100%;
+  }
+  .nav .hidden__item {
+    width: 100%;
+  }
+  .nav .hidden__link {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(10%);
+  }
+  50% {
+    transform: translateY(20%);
+  }
+  75% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/*# sourceMappingURL=style.css.map */
